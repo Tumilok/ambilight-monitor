@@ -1,0 +1,6 @@
+model/Algorithm.java
+ model.Algorithm
+AmbilightAlgorithmCheck.java
+ AmbilightAlgorithmCheck
+controller/MainController.java
+ controller.MainController
