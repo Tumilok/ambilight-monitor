@@ -7,15 +7,16 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import model.Algorithm;
 
+import java.awt.*;
 import java.io.IOException;
 
-public class AmbilightAlgorithmCheck extends Application {
+public class Ambilight extends Application {
 
     @Override
     public void start(Stage primaryStage) {
         try {
             var loader = new FXMLLoader();
-            loader.setLocation(AmbilightAlgorithmCheck.class.getResource("MainView.fxml"));
+            loader.setLocation(Ambilight.class.getResource("MainView.fxml"));
             Pane rootLayout = loader.load();
 
             MainController controller = loader.getController();
@@ -23,7 +24,8 @@ public class AmbilightAlgorithmCheck extends Application {
             configureStage(primaryStage, rootLayout);
             primaryStage.show();
             var algorithm = new Algorithm(controller);
-        } catch (IOException e) {
+            algorithm.start();
+        } catch (IOException | AWTException e) {
             e.printStackTrace();
         }
     }
@@ -31,7 +33,7 @@ public class AmbilightAlgorithmCheck extends Application {
     private void configureStage(Stage primaryStage, Pane rootLayout) {
         var scene = new Scene(rootLayout);
         primaryStage.setScene(scene);
-        primaryStage.setTitle("Ambilight algorithm check");
+        primaryStage.setTitle("Ambilight");
         primaryStage.minWidthProperty().bind(rootLayout.minWidthProperty());
         primaryStage.minHeightProperty().bind(rootLayout.minHeightProperty());
         primaryStage.setResizable(false);
