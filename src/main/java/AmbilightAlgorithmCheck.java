@@ -10,13 +10,13 @@ import model.Algorithm;
 import java.awt.*;
 import java.io.IOException;
 
-public class Ambilight extends Application {
+public class AmbilightAlgorithmCheck extends Application {
 
     @Override
     public void start(Stage primaryStage) {
         try {
             var loader = new FXMLLoader();
-            loader.setLocation(Ambilight.class.getResource("MainView.fxml"));
+            loader.setLocation(AmbilightAlgorithmCheck.class.getResource("MainView.fxml"));
             Pane rootLayout = loader.load();
 
             MainController controller = loader.getController();
