@@ -1,4 +1,4 @@
-package controller;
+package ambilight.v2;
 
 import javafx.fxml.FXML;
 import javafx.scene.layout.Pane;
@@ -7,7 +7,7 @@ import javafx.scene.shape.Circle;
 
 import java.util.Arrays;
 
-import static model.Algorithm.*;
+import static ambilight.v2.Algorithm.*;
 
 public class MainController {
     private final static int FRAME_WIDTH = 800;

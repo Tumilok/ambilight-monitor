@@ -1,11 +1,11 @@
-import controller.MainController;
+package ambilight.v2;
+
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import model.Algorithm;
 
 import java.awt.*;
 import java.io.IOException;
@@ -16,7 +16,7 @@ public class AmbilightAlgorithmCheck extends Application {
     public void start(Stage primaryStage) {
         try {
             var loader = new FXMLLoader();
-            loader.setLocation(AmbilightAlgorithmCheck.class.getResource("MainView.fxml"));
+            loader.setLocation(AmbilightAlgorithmCheck.class.getResource("/MainView.fxml"));
             Pane rootLayout = loader.load();
 
             MainController controller = loader.getController();

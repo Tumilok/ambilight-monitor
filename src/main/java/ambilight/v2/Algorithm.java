@@ -1,6 +1,5 @@
-package model;
+package ambilight.v2;
 
-import controller.MainController;
 import javafx.scene.paint.Color;
 
 import java.awt.*;

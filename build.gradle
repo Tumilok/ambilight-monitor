@@ -13,7 +13,9 @@ repositories {
 }
 
 application {
-    mainClassName = 'AmbilightAlgorithmCheck'
+//    mainClassName = 'ambilight.v1.Algorithm'
+    mainClassName = 'ambilight.v2.AmbilightAlgorithmCheck'
+//    mainClassName = 'ambilight.v3.Ambilight'
 }
 
 java {
@@ -27,6 +29,8 @@ javafx {
 }
 
 dependencies {
+    implementation 'org.rxtx:rxtx:2.1.7'
+
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
 }
